@@ -53,8 +53,8 @@ class V1beta1CustomResourceDefinitionStatus(object):
         self.discriminator = None
 
         self.accepted_names = accepted_names
-        self.conditions = conditions
-        self.stored_versions = stored_versions
+        self.conditions = conditions or []
+        self.stored_versions = stored_versions or []
 
     @property
     def accepted_names(self):
